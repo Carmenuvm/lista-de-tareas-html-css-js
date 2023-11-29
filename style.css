@@ -1,0 +1,131 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif; /* configuramos la fuente de la pagina */
+    box-sizing: border-box; /* utilizamos la propiedad border-box para que el padding y el border pasen a formar parte del cálculo del ancho del elemento padre */
+  }
+  
+  /* se establece el fondo de la pagina con un gradient y en caso que no lo soporte el navegador se pasa un color plano */
+  body {
+    background: rgb(28, 0, 62);
+    background: linear-gradient(
+      130deg,
+      rgba(28, 0, 62, 1) 0%,
+      rgba(121, 9, 86, 1) 38%,
+      rgba(136, 0, 219, 1) 100%
+    );
+    background-attachment: fixed;
+  }
+  
+  header,
+  section {
+    position: inherit;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* se agregan los estilos compartidos a las clases .titulo y .contenido  */
+  header .titulo,
+  section .contenido {
+    position: absolute;
+    padding: 10px;
+    background-color: #ddd;
+    text-align: center;
+    border-radius: 50px;
+    z-index: 10;
+  }
+  
+  section .contenido {
+    top: 100px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  
+  /* FORMULARIO */
+  
+  /* se colocan los elementos con la clase .input-text y .boton en display inline-block para que esten en una misma linea sin perder las propiedades de bloque */
+  .formulario .input-text,
+  .formulario .boton {
+    display: inline-block;
+  }
+  
+  /* se agregan los estilos compartidos a las etiquetas input y button que esten dentro de la clase formulario */
+  .formulario .input-text input,
+  .formulario .boton button {
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 14pt;
+    width: 100%;
+  }
+  
+  /* al boton de agregar se le añade color de fondo y color de texto, con la propiedad transition hacemos que los cambios de estilo que se le hagan cundo el puntero pase por encima del elemento sea mas suave */
+  .formulario .boton button {
+    background-color: #430396;
+    color: #fff;
+    transition: all 0.3s;
+  }
+  
+  /* se utiliza la pseudoclase hover para cambiar los estilos del boton cundo el puntero pase por encima,
+  se le cambia el color de fondo y el tipo de puntero */
+  .formulario .boton button:hover {
+    cursor: pointer;
+    background-color: #5004b4;
+  }
+  
+  /* se utiliza la pseudoclase active para cambiar los estilos del boton cundo el puntero le de click,
+  se cambia el color de fondo */
+  .formulario .boton button:active {
+    background-color: #9b53fa;
+  }
+  
+  /* FIN FORMULARIO */
+
+
+
+
+
+  /* estilos para que se adapte la pagina dependiendo del ancho del dispositivo donde se visualice */
+  
+  @media only screen and (max-width: 768px) {
+    header .titulo,
+    section .contenido {
+      width: 90%;
+      left: 5%;
+    }
+  
+    .formulario .input-text {
+      margin-top: 10px;
+      width: 100%;
+    }
+  
+    .formulario .boton {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    header .titulo,
+    section .contenido {
+      width: 80%;
+      left: 10%;
+    }
+  
+    .formulario .input-text {
+      width: 70%;
+    }
+  
+    .formulario .boton {
+      width: 28%;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+    header .titulo,
+    section .contenido {
+      width: 60%;
+      left: 20%;
+    }
+  }
+  
