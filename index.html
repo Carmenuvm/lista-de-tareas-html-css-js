@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <!-- Se configura el viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,48 +8,53 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Añadimos un titulo a la pagina -->
     <title>Lista de tareas</title>
-</head>
-<body>
+  </head>
+  <body>
 
-	<!-- Se añade una etiqueta header para agregar los elementos de encabezado -->
-	<header>
-		<div class="titulo">
-			<h1>Lista de Tareas</h1>
-		</div>
-	</header>
+    <!-- Se añade una etiqueta header para agregar los elementos de encabezado -->
+    <header>
+      <div class="titulo">
+        <h1>Lista de Tareas</h1>
+      </div>
+    </header>
 
-	<!-- en la etiqueta section colocaremos el contenido para la lista de tareas -->
-	<section>
-		<div class="contenido">
-			<!-- En el div.formulario se agrega el formulario correspondiente para la creacion de tareas -->
-			<div class="formulario">
-				<form id="formulario">
-					<div class="input-text">
-						<!-- en el input#inputTarea se colocara la tarea -->
-						<input type="text" placeholder="Nueva Tarea" id="inputTarea" />
-					</div>
-					<div class="boton">
-						<!-- con el button se enviara el formulario -->
-						<button type="submit">Agregar</button>
-					</div>
-				</form>
-			</div>
+    <!-- en la etiqueta section colocaremos el contenido para la lista de tareas -->
+    <section>
+      <div class="contenido">
+        <!-- En el div.formulario se agrega el formulario correspondiente para la creacion de tareas -->
+        <div class="formulario">
+          <form id="formulario">
+            <div class="input-text">
+              <!-- en el input#inputTarea se colocara la tarea -->
+              <input type="text" placeholder="Nueva Tarea" id="inputTarea" />
+            </div>
+            <div class="boton">
+              <!-- con el button se enviara el formulario -->
+              <button type="submit">Agregar</button>
+            </div>
+          </form>
+        </div>
 
-			<!-- el div.lista va a contener la opcion de filtrado y la lista de tareas -->
-			<div class="lista">
-				<div class="filtro">
-					<!-- el select#filtro nos brinda las opciones de filtrado de la lista de tareas  -->
-					<select id="filtro">
-						<option value="1">Todas</option>
-						<option value="2">Por completar</option>
-						<option value="3">Terminadas</option>
-					</select>
-				</div>
+        <!-- el div.lista va a contener la opcion de filtrado y la lista de tareas -->
+        <div class="lista">
+          <div class="filtro">
+            <!-- el select#filtro nos brinda las opciones de filtrado de la lista de tareas  -->
+            <select id="filtro">
+              <option value="1">Todas</option>
+              <option value="2">Por completar</option>
+              <option value="3">Terminadas</option>
+            </select>
+          </div>
 
-				<!-- en el div#listaTareas vamos a hacer el render de la lista de tareas -->
-									<div id="listaTareas"></div>
-		</div>
-	</section>
-    
-</body>
+          <!-- en el div#listaTareas vamos a hacer el render de la lista de tareas -->
+					<div id="listaTareas"></div>
+      </div>
+    </section>
+  </body>
+
+  <!-- 
+    se importa el fichero app.js que contiene el código javascript que le va a 
+    dar el comportamiento a la pagina
+  -->
+  <script src="app.js"></script>
 </html>
